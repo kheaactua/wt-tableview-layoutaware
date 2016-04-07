@@ -32,6 +32,6 @@ This will create a table widget where 4 of the columns have an absolute width, a
 
 This table also sets a height based on number of rows one wants displayed, and tries to account for the vertical scroll bar - i.e. if a table without a horizontal scroll bar exceeds it's set height, it'll still try to size the columns so that when a vertical scroll bar appears, a horizontal scroll bar doesn't.
 
-If the TableView was implemented as a straight up table tag, everything here would be unnecessary, but it isn't..
+If the `TableView` was implemented as a straight up table tag, everything here would be unnecessary, but it isn't..
 
 Code isn't under any license. Happy to receive feedback.  Also [posted it back to the Wt forum](http://redmine.emweb.be/boards/1/topics/11110) as the forum has helped me out a lot.
