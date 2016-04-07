@@ -1,10 +1,13 @@
-I found myself writing layoutSizeChanged on every table I was implementing because `WTableView` doesn't accept relative column widths (and I can't even think of a situation where I'd want only absolute column widths)
+This table extends [Wt](http://www.webtoolkit.eu/wt)'s [WTable](https://www.webtoolkit.eu/wt/doc/reference/html/classWt_1_1WTableView.html) view to make it more layout aware.
 
-Looking through these forums, I found a lot of postings frustrated with the same thing, so I wrote (attached) a class that implements layout awareness. All you have to do is extend this, and then setColumnWidth() will work with a `Wt::WLength` of type `Wt::WLength::Percentage`
+I found myself writing `layoutSizeChanged` on every table I was implementing because `WTableView` doesn't accept relative column widths (and I can't even think of a situation where I'd want only absolute column widths)
 
-Note, often I use these tables with a `Wt::Dbo::QueryModel`, so I tend to setup the column widths in a member function other than the constructor (::init()).
+Looking through these forums, I found a lot of postings frustrated with the same thing, so I wrote (attached) a class that implements layout awareness. All you have to do is extend this, and then `setColumnWidth()` will work with a `Wt::WLength` of type `Wt::WLength::Percentage`
 
-So, for example,
+Note, often I use these tables with a `Wt::Dbo::QueryModel`, so I tend to setup the column widths in a member function other than the constructor (`::init()`).
+
+Example
+^^^^^^^
 
 ```c++
 ReportTableView::ReportTableView(Wt::WContainerWidget* parent)
