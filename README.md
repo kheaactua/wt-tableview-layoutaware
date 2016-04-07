@@ -6,8 +6,7 @@ Looking through these forums, I found a lot of postings frustrated with the same
 
 Note, often I use these tables with a `Wt::Dbo::QueryModel`, so I tend to setup the column widths in a member function other than the constructor (`::init()`).
 
-Example
-^^^^^^^
+### Example
 
 ```c++
 ReportTableView::ReportTableView(Wt::WContainerWidget* parent)
